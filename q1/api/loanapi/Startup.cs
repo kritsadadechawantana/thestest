@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NSwag.AspNetCore;
 
 namespace loanapi
 {
@@ -26,6 +27,8 @@ namespace loanapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +44,15 @@ namespace loanapi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+            app.UseSwaggerUi3();
+
+            app.UseCors(builder =>
+            builder.WithOrigins("*")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
             app.UseMvc();
         }
     }

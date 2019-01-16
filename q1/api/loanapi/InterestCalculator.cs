@@ -6,7 +6,7 @@ using loanapi.Models;
 
 namespace loanapi
 {
-    public class InterestCalculator : IInterestCalculator
+    public class InterestCalculator
     {
         public IEnumerable<InterestCalculateResult> Calculate(double interest, double amount, int years)
         {
