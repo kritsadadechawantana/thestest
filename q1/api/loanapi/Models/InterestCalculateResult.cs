@@ -9,6 +9,6 @@ namespace loanapi.Models
     {
         public double Remaining { get; set; }
         public double Interest { get; set; }
-        public double Amount { get; set; }
+        public double Summary { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace loanapi
             for (int i = 1; i <= years; i++)
             {
                 var calculateresult = calculateInterest(interest, remaining);
+                remaining = calculateresult.Summary;
                 interestCalculateResult.Add(calculateresult);
             }
 
@@ -24,12 +25,11 @@ namespace loanapi
         private InterestCalculateResult calculateInterest(double interest, double amount)
         {
             var interestAmount = amount * (interest * 0.01);
-            var summary = (amount * 12) / 100;
             return new InterestCalculateResult
             {
                 Remaining = amount,
                 Interest = interestAmount,
-                Amount = summary
+                Summary = amount + interestAmount
             };
         }
     }
