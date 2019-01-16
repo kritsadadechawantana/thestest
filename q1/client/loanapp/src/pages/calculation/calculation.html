@@ -32,5 +32,5 @@
     <button ion-button block (click)="Calculate()">คำนวน</button>
   </div>
 
-  <div ion-item *ngFor="let result of loanResult"> ปีที่ 1: คงค้าง {{ result.remaining | number }} ดอกเบี้ย {{ result.interest }} = {{ result.remaining | number }} x 12 / 100 ยอดที่ต้องชำระ {{ result.summary | number }}</div>
+  <div ion-item *ngFor="let result of loanResult; let i = index"> ปีที่ {{i+1}}: คงค้าง {{ result.remaining | number }} ดอกเบี้ย {{ result.interest }} = {{ result.remaining | number }} x 12 / 100 ยอดที่ต้องชำระ {{ result.summary | number }}</div>
 </ion-content>
