@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Loan App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>อัตราดอกเบี้ย</ion-label>
+      <ion-input type="text" [(ngModel)]="interest"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button ion-button block (click)="confirmInterest()">ถัดไป</button>
+  </div>
+</ion-content>

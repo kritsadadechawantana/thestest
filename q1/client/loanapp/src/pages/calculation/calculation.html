@@ -1,0 +1,36 @@
+<!--
+  Generated template for the CalculationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Calculation</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>ยอดเงินต้น</ion-label>
+      <ion-input type="text" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>จำนวนปี</ion-label>
+      <ion-input type="text" [(ngModel)]="years"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button ion-button block (click)="Calculate()">คำนวน</button>
+  </div>
+
+  <div ion-item *ngFor="let result of loanResult"> ปีที่ 1: คงค้าง {{ result.remaining | number }} ดอกเบี้ย {{ result.interest }} = {{ result.remaining | number }} x 12 / 100 ยอดที่ต้องชำระ {{ result.summary | number }}</div>
+</ion-content>

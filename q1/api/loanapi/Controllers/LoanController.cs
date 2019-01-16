@@ -11,6 +11,7 @@ namespace loanapi.Controllers
     [ApiController]
     public class LoanController : ControllerBase
     {
+        public static double interest;
         private readonly InterestCalculator interestCalculator;
 
         public LoanController()
@@ -18,8 +19,14 @@ namespace loanapi.Controllers
             this.interestCalculator = new InterestCalculator();
         }
 
-        [HttpGet]
-        public IEnumerable<InterestCalculateResult> Calculate(double interest, double amount, int years)
+        [HttpGet("{interestValue}")]
+        public void SetInterest(double interestValue)
+        {
+            interest = interestValue;
+        }
+
+        [HttpGet("{amount}/{years}")]
+        public IEnumerable<InterestCalculateResult> Calculate(double amount, int years)
         {
             return interestCalculator.Calculate(interest, amount, years);
         }
