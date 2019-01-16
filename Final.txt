@@ -1,0 +1,3 @@
+- soucecode ข้อ 1 อยู่ในโฟลเดอร์ q1 ทั้ง api และ client
+- soucecode ข้อ 2 อยู่ในโฟลเดอร์ q2 ทั้ง api และ client
+- api ทั้ง 2 ตัวรันที่ http://localhost:5000
