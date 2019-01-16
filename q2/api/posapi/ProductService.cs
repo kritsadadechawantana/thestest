@@ -19,6 +19,7 @@ namespace posapi
         {
             productDataStore.Add(new Product
             {
+                Id = Guid.NewGuid().ToString(),
                 Name = product.Name,
                 Price = product.Price
             });

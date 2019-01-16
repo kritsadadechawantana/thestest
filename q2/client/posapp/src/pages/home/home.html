@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>รายการสินค้า</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-row>
+              <ion-col col-md-3>
+                  ชื่อ
+              </ion-col>
+              <ion-col col-md-3>
+                  ราคา
+              </ion-col>
+              <ion-col col-md-3>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+    </ion-list>
+  <ion-list *ngIf="products">
+    <ion-item *ngFor="let product of products">
+        <ion-row>
+          <ion-col col-md-3>
+              {{product.name}}
+          </ion-col>
+          <ion-col col-md-3>
+              {{product.price}}
+          </ion-col>
+          <ion-col col-md-3>
+              <button ion-button (click)="AddToCart(product.id)">เพิ่มเข้าตะกร้า</button>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+</ion-list>
+</ion-content>
