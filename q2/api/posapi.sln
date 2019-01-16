@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "posapi", "posapi\posapi.csproj", "{933FE5FA-8CE9-4ABD-8820-F300BF955A40}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3D15523F-270B-4A29-B02E-EEC963D28D59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "posapi.Test", "posapi.Test\posapi.Test.csproj", "{6BBCE98F-EA25-40E7-84BC-1A921296911F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{933FE5FA-8CE9-4ABD-8820-F300BF955A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{933FE5FA-8CE9-4ABD-8820-F300BF955A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{933FE5FA-8CE9-4ABD-8820-F300BF955A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBCE98F-EA25-40E7-84BC-1A921296911F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBCE98F-EA25-40E7-84BC-1A921296911F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBCE98F-EA25-40E7-84BC-1A921296911F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBCE98F-EA25-40E7-84BC-1A921296911F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BBCE98F-EA25-40E7-84BC-1A921296911F} = {3D15523F-270B-4A29-B02E-EEC963D28D59}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CC596D4-1382-4833-8FE3-E18CC44D539C}
