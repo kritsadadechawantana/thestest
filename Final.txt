@@ -1,3 +1,10 @@
 - soucecode ข้อ 1 อยู่ในโฟลเดอร์ q1 ทั้ง api และ client
+ app    10/10
+ api    10/10
+ test   5/5
 - soucecode ข้อ 2 อยู่ในโฟลเดอร์ q2 ทั้ง api และ client
+ app   23/25
+ api   20/20
+ test  9/10
 - api ทั้ง 2 ตัวรันที่ http://localhost:5000
+Total  = 77
